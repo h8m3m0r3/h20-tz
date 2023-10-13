@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "Proxima Nova 600";
+  src: url(./assets/fonts/proximanova_regular.ttf);
+}
+@font-face {
+  font-family: "Proxima Nova 700";
+  src: url(./assets/fonts/proximanova_extrabold.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.layout {
+  position: relative;
+}
+
+// ========================================
+
+.statistic {
+  padding: 30px 50px 0px 50px;
+  position: absolute;
+  left: 150px;
+  top: 150px;
+  width: 1670px;
+  height: 1226px;
+  border-radius: 56px 0px 0px 0px;
+  background: #f8f8f8;
+  z-index: 2;
+  h1 {
+    color: #323f47;
+    font-family: "Proxima Nova 700";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 44px; /* 157.143% */
+    letter-spacing: -0.56px;
+  }
+  .statistic__content {
+    display: flex;
+    figure {
+      .statistic__cards {
+        margin-top: 25px;
+        display: flex;
+        gap: 50px;
+        .statistic__card {
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          width: 210px;
+          height: 160px;
+          border-radius: 32px;
+          padding: 30px 60px 20px 60px;
+          .card__percent {
+            width: 180px;
+            height: 45px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .card__percent.good {
+            background: #54d3c226;
+            p {
+              color: #54d3c2;
+              font-family: "Proxima Nova 600";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 44px; /* 275% */
+              letter-spacing: -0.56px;
+            }
+          }
+          .card__percent.bad {
+            background: #fc5c6526;
+            p {
+              color: #fc5c65;
+              font-family: "Proxima Nova 600";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 44px; /* 275% */
+              letter-spacing: -0.56px;
+            }
+          }
+          .card__info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .card__value {
+              color: #323f47;
+              font-family: "Proxima Nova 600";
+              font-size: 35px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 44px; /* 157.143% */
+              letter-spacing: -0.56px;
+            }
+            .card__type {
+              padding: 0;
+              color: #323f47;
+              font-family: "Proxima Nova 600";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 44px; /* 275% */
+              letter-spacing: 1px;
+            }
+          }
+        }
+        .statistic__card.active {
+          background: #54d3c2;
+          .card__percent.good {
+            background: rgba(248, 248, 248, 0.25);
+            p {
+              color: #fff;
+            }
+          }
+          .card__percent.bad {
+            background: #ab343a95;
+            p {
+              color: #fff;
+            }
+          }
+          .card__info {
+            .card__value {
+              color: #fff;
+            }
+            .card__type {
+              color: #fff;
+            }
+          }
+        }
+      }
+      .statistic__chartblock {
+        position: relative;
+        margin-top: 50px;
+        padding: 20px 50px 30px 50px;
+        width: 990px;
+        height: 500px;
+        border-radius: 32px;
+        background: #fff;
+        .statistic__chartheader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            color: #2d4258;
+            font-family: "Proxima Nova 700";
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 44px; /* 220% */
+            letter-spacing: -0.56px;
+          }
+          .statistic__chartfilter {
+            display: flex;
+            gap: 30px;
+            position: relative;
+            .chartfilter {
+              color: #d2d1d1;
+              font-family: "Proxima Nova 600";
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 24px; /* 150% */
+              letter-spacing: 0.44px;
+              cursor: pointer;
+            }
+            .chartfilter.active {
+              color: #323f47;
+              font-family: "Proxima Nova 700";
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px; /* 150% */
+              letter-spacing: 0.44px;
+            }
+            hr {
+              top: 25px;
+              position: absolute;
+              background: #d2d1d1;
+              width: 215px;
+              height: 1.5px;
+              border: none;
+            }
+            .hr.active {
+              top: 24px;
+              display: block;
+              position: absolute;
+              height: 4.5px;
+              background: #54d3c2;
+            }
+          }
+        }
+        .statistic__chart {
+          position: absolute;
+          left: 0;
+          width: 1030px;
+          height: 260px;
+        }
+        .statistic__items {
+          position: absolute;
+          bottom: 30px;
+          display: flex;
+          width: 990px;
+          .statistic__item {
+            box-sizing: content-box;
+            flex-wrap: wrap;
+            width: 185px;
+            display: flex;
+            align-items: center;
+            .item__circle {
+              width: 35px;
+              height: 35px;
+              border-radius: 35px;
+              margin-right: 10px;
+            }
+            .item__type {
+              height: 20px;
+              color: #6d7986;
+              font-family: "Proxima Nova 600";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+            }
+            .item__value {
+              color: #323f47;
+              font-family: "Proxima Nova 700";
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 120%; /* 19.2px */
+            }
+          }
+          .statistic__item:not(:first-child) {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+    .statistic__aside {
+      margin-top: 25px;
+      margin-left: 50px;
+      width: 450px;
+      height: 760px;
+      border-radius: 32px;
+      background: #fff;
+      padding: 25px 40px 25px 40px;
+      .aside__header {
+        margin-bottom: 15px;
+        p {
+          color: #2d4258;
+          font-family: "Proxima Nova 700";
+          font-size: 27px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 44px; /* 220% */
+          letter-spacing: -0.56px;
+        }
+      }
+      .aside__troubles {
+        margin-top: 20px;
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        gap: 27px;
+        .aside__trouble {
+          display: flex;
+          .greenCircle {
+            width: 38px;
+            height: 38px;
+            background: rgb(81, 189, 81);
+            border-radius: 19px;
+            margin-right: 20px;
+          }
+          .yellowCircle {
+            background-image: url("./assets/images/yellowCircle.svg");
+            background-size: 100%;
+            width: 40px;
+            height: 40px;
+            border-radius: 19px;
+            margin-right: 18px;
+          }
+          .redCircle {
+            background-image: url("./assets/images/redCircle.svg");
+            background-size: 100%;
+            width: 40px;
+            height: 40px;
+            border-radius: 19px;
+            margin-right: 18px;
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 45px;
+            .info__text {
+              color: #6d7986;
+              font-family: "Proxima Nova 600";
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 18px; /* 128.571% */
+              letter-spacing: -0.56px;
+            }
+            .info__value {
+              color: #323f47;
+              font-family: "Proxima Nova 600";
+              font-size: 23px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 120%; /* 21.6px */
+            }
+          }
+        }
+      }
+    }
+  }
+}

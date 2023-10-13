@@ -1,0 +1,29 @@
+.aside__navbar {
+  position: absolute;
+  width: 150px;
+  height: 1376px;
+  padding-right: 100px;
+  border-radius: 56px 56px 0px 56px;
+  background: linear-gradient(180deg, #54d3c2 0%, #30898a 100%);
+  z-index: auto;
+  ul {
+    padding-top: 85px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+}
+.aside__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aside__icon.active {
+  border-radius: 16px;
+  background: rgba(169, 233, 224, 0.75);
+}
+
