@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import "./App.scss";
-import { AsideNavbar, Header,MainContent } from "./components/index.js";
+import { AsideNavbar, Header, MainContent } from "./components";
 
 function App() {
 
