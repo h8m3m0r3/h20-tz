@@ -46,7 +46,6 @@ function generateDataArrayForYear() {
   return dataArray;
 }
 const yearByDay = generateDataArrayForYear();
-console.log(yearByDay);
 // =================== За год по месяцам ===================
 // total
 function calculateMonthlyRevenueAndExpenses(dataArray) {

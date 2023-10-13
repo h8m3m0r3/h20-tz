@@ -2,7 +2,6 @@ import React from "react";
 import { Line } from "@ant-design/plots";
 
 const Chart = ({ data }) => {
-  console.log(data[0])
   const config = {
     data,
     xField: `gap`,
